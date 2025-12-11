@@ -591,7 +591,7 @@
         <div class="container">
             <h2 class="section-title">Establish Link</h2>
             <div class="glass-panel contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Transmission Sent!');">
+                <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="e890416f-93ae-4ae1-adac-8bb8febf722e">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="IDENTIFIER (NAME)" required>
@@ -602,6 +602,8 @@
                     <div class="form-group">
                         <textarea class="form-control" name="message" placeholder="MESSAGE DATA..." required></textarea>
                     </div>
+                    <! -- Step 1: Add this line -->
+                    <div class="h-captcha" data-captcha="true"></div>
                     <button type="submit" class="cta-btn" style="width: 100%; cursor: pointer;">TRANSMIT</button>
                 </form>
             </div>
@@ -610,7 +612,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Orbit Portfolio. All systems nominal.</p>
+            <p>&copy; 2025 Orbit Portfolio. All systems nominal.</p>
         </div>
     </footer>
 
@@ -735,5 +737,7 @@
             }
         });
     </script>
+    <! -- Step 2: Add the Web3Forms script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
